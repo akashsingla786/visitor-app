@@ -74,7 +74,7 @@ function checkinmail(name,email){
       from: process.env.MY_MAIL,
       subject:"Entering office",
       text:`Hey ${name} welcome to our office you entered the office at ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`,
-      html:`<h1>Hey ${name} welcome to our office</h1> <strong>you entered the office at ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} </strong>`
+      html:`<h1>Hey ${name} welcome to our office</h1> <strong>you entered the office on ${d.toLocaleString()} </strong>`
   };
   sgMail.send(msg)
   .then(()=>{
@@ -96,7 +96,7 @@ function checkoutmail(email){
       to: email,
       from: process.env.MY_MAIL,
       subject:"Leaving building",
-      text:` You checked out the building at ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+      text:` You checked out the building on ${d.toLocaleString()}`
       
   };
   sgMail.send(msg)
