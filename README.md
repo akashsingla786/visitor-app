@@ -1,2 +1,2 @@
 # visitor-app
-https://visitors-app1.herokuapp.com/
+https://visitor-app1.herokuapp.com/
